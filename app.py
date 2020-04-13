@@ -6,6 +6,7 @@ from currency_data import check_curr_code, get_curr_symbol
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "SECRET"
+app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 debug = DebugToolbarExtension(app)
 
 rates = CurrencyRates()
