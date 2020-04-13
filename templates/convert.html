@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/" class="m-auto">
+    <div class="display-3 text-center mt-5">
+        <p class="m-0">The result is:</p>
+        <span class="">{{ symbol }} {{ result }}</span>
+        <button type="submit" class="btn btn-primary d-block mt-5 mx-auto">Home</button>
+    </div>
+</form>
+
+{% endblock %}

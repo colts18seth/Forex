@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 class="text-center mb-5">Forex Converter</h1>
+{% for msg in get_flashed_messages() %}
+<p>{{ msg }}</p>
+{% endfor %}
+<div class="w-75 m-auto">
+    <form action="/convert" class="m-auto w-75">
+        <div class="form-row">
+            <div class="input-group mb-3 col">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Converting from:</span>
+                </div>
+                <input type="text" name="from" class="form-control">
+            </div>
+            <div class="input-group mb-3 col">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Converting to:</span>
+                </div>
+                <input type="text" name="to" class="form-control">
+            </div>
+            <div class="input-group mb-3 col">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Amount:</span>
+                </div>
+                <input type="text" name="amount" class="form-control">
+            </div>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="text-center btn btn-primary">Convert</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
